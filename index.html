@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuoi passare San Valentino con me?</title>
+  <style>
+    body {
+      text-align: center;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      background-color: #ffc0cb; /* Pink background color */
+    }
+    h1 {
+      color: #ff69b4; /* Hot pink text color */
+    }
+    #valentine-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #valentine-gif {
+      max-width: 100%; /* Make sure the gif doesn't exceed the container width */
+      border-radius: 10px; /* Optional: Add a border-radius for a rounded appearance */
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Adjust as needed */
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease; /* Add smooth transition effect */
+    }
+  </style>
+</head>
+<body>
+  <h1>Vuoi passare San Valentino con me?</h1>
+
+  <!-- Create a container for gif and buttons -->
+  <div id="valentine-container">
+    <!-- Add a gif with the id "valentine-gif" -->
+    <img id="valentine-gif" src="https://i.pinimg.com/originals/27/5e/4b/275e4bf4e8f85d5d2495131a50cff14c.gif" alt="Valentine's GIF">
+
+    <!-- Add a container for centered buttons -->
+    <div class="button-container">
+      <button id="yes-button" onclick="alert('non che avessi molta scelta baby')">Sì</button>
+      <button id="no-button" onmouseover="moveButton()">No</button>
+    </div>
+  </div>
+
+  <script>
+    var noButton = document.getElementById('no-button');
+
+    function moveButton() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+
+      noButton.style.position = 'absolute';
+      noButton.style.left = x + 'px';
+      noButton.style.top = y + 'px';
+    }
+  </script>
+</body>
+</html>
